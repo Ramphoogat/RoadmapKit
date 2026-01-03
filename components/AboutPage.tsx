@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { NeoButton, NeoCard } from './NeoComponents';
-import { MoveLeft, Heart, Code, Zap, Users, Globe, Cpu, Layers } from 'lucide-react';
+import { MoveLeft, Heart, Code, Zap, Users, Globe, Cpu, Layers, Github } from 'lucide-react';
 
 interface AboutPageProps {
     onBack: () => void;
@@ -44,7 +44,15 @@ export default function AboutPage({ onBack, onNavigate }: AboutPageProps) {
                     <button onClick={() => onNavigate('pricing')} className="hover:text-neo-pink transition-colors">Pricing</button>
                     <button onClick={() => onNavigate('about')} className="text-neo-pink transition-colors">About</button>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 items-center">
+                     <a 
+                        href="https://github.com/Ramphoogat/RoadmapKit" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-neo-offwhite shadow-neo transition-all active:translate-y-[2px] active:shadow-none"
+                     >
+                        <Github size={20} />
+                     </a>
                      <NeoButton onClick={onBack} variant="ghost" className="!px-4 !py-2 !border-2 !border-black" icon={<MoveLeft size={16}/>}>Back</NeoButton>
                 </div>
             </nav>

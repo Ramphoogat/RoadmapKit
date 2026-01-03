@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NeoButton, NeoModal, NeoInput } from './NeoComponents';
-import { Layout, Trash2, Edit3, X, MoveLeft, Globe, Lock, Check } from 'lucide-react';
+import { Layout, Trash2, Edit3, X, MoveLeft, Globe, Lock, Check, Github } from 'lucide-react';
 import { SavedTemplate, OFFICIAL_TEMPLATES } from '../types';
 
 interface TemplatesPageProps {
@@ -90,7 +90,15 @@ export default function TemplatesPage({ onBack, onStart, savedTemplates, onSaveT
             <button onClick={() => onNavigate('pricing')} className="hover:text-neo-pink transition-colors">Pricing</button>
             <button onClick={() => onNavigate('about')} className="hover:text-neo-pink transition-colors">About</button>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
+             <a 
+                href="https://github.com/Ramphoogat/RoadmapKit" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-neo-offwhite shadow-neo transition-all active:translate-y-[2px] active:shadow-none"
+             >
+                <Github size={20} />
+             </a>
              <NeoButton onClick={onBack} variant="ghost" className="!px-4 !py-2 !border-2 !border-black" icon={<MoveLeft size={16}/>}>Back</NeoButton>
         </div>
       </nav>

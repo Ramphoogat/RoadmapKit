@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { NeoButton, NeoCard } from './NeoComponents';
-import { Search, Loader2, AlertCircle } from 'lucide-react';
+import { Search, Loader2, AlertCircle, Github } from 'lucide-react';
 import { GoogleGenAI, Type } from "@google/genai";
 import { Node } from 'reactflow';
 import { NodeData, SavedTemplate } from '../types';
@@ -331,7 +331,15 @@ export default function Landing({ onStart, onSaveTemplate, onViewTemplates, onVi
             <button onClick={() => onNavigate('pricing')} className="hover:text-neo-pink transition-colors">Pricing</button>
             <button onClick={() => onNavigate('about')} className="hover:text-neo-pink transition-colors">About</button>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
+             <a 
+                href="https://github.com/Ramphoogat/RoadmapKit" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center border-2 border-black bg-white hover:bg-neo-offwhite shadow-neo transition-all active:translate-y-[2px] active:shadow-none"
+             >
+                <Github size={20} />
+             </a>
              <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white border-2 border-black">
                 <span className="text-xs">👤</span>
              </div>
