@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoadmapKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.10.1/dist/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'sans-serif'],
+            },
+            colors: {
+              neo: {
+                pink: '#FF5252',   /* Coral Red (Primary Action) */
+                cyan: '#448AFF',   /* Royal Blue */
+                yellow: '#FFD740', /* Amber/Yellow */
+                lime: '#69F0AE',   /* Bright Green */
+                green: '#00C853',  /* Darker Green (Success) */
+                orange: '#FF6E40', /* Burnt Orange */
+                purple: '#7C4DFF', /* Deep Purple */
+                white: '#FFFFFF',
+                offwhite: '#FDF6E3', /* Warm Beige Background */
+                text: '#1A1A1A',
+                black: '#000000',
+              }
+            },
+            boxShadow: {
+              'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+              'neo-lg': '6px 6px 0px 0px rgba(0,0,0,1)',
+              'neo-xl': '8px 8px 0px 0px rgba(0,0,0,1)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #FDF6E3;
+        color: #1A1A1A;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      
+      /* Global Scrollbar Hiding */
+      * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      .react-flow__handle {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border: 1px solid #fff;
+        border-radius: 0;
+      }
+      .react-flow__handle:hover {
+        background: #448AFF;
+        transform: scale(1.2);
+        transition: transform 0.2s;
+      }
+      .react-flow__controls button {
+        background-color: #fff;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+      }
+      .react-flow__controls button:hover {
+        background-color: #FFD740;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.294.0?external=react,react-dom",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "reactflow": "https://esm.sh/reactflow@11.10.1?external=react,react-dom",
+    "reactflow/": "https://esm.sh/reactflow@11.10.1/",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
